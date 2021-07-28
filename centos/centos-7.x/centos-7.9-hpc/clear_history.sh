@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 
 # Clear History
 sudo rm -rf /var/log
@@ -12,3 +13,4 @@ unset HISTFILE
 history -c
 sudo rm -rf /run/cloud-init /var/lib/cloud/instances/*
 yum clean all
+
