@@ -63,4 +63,5 @@ $COMMON_DIR/copy_test_file.sh
 ./disable_cloudinit.sh
 
 # clear history
-$COMMON_DIR/../centos/common/clear_history.sh
+# Uncomment the line below if you are running this on a VM
+#./clear_history.sh
