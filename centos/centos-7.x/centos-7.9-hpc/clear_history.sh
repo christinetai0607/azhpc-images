@@ -15,3 +15,10 @@ history -c
 sudo rm -rf /run/cloud-init /var/lib/cloud/instances/*
 yum clean all
 
+# Zero Out Unused Space
+for part in $(awk '$3 == "ext4" || $3 == "xfs" {print $2}' /proc/mounts)
+do
+    dd if=/dev/zero of=${part}/EMPTY bs=1M || true;
+    rm -f ${part}/EMPTY
+done
+sync;
