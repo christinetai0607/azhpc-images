@@ -3,7 +3,7 @@ set -ex
 
 # Clear History
 sudo rm -rf /var/log/*
-sudo rm -f /etc/resolv.conf /var/lib/NetworkManager/* /etc/ssh/ssh_host_*
+sudo rm -f /etc/ssh/ssh_host_*
 sudo rm -f /tmp/*.log* /tmp/ssh-* /tmp/yum*  /tmp/tmp*
 sudo rm -f /var/spool/plymouth/boot.log 
 sudo rm -f /var/lib/dhclient/* /var/lib/systemd/random-seed
